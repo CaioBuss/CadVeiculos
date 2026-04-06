@@ -28,7 +28,19 @@ void main(){
                 IO.readln("Pressione Enter para Continuar");
             }
             case 3 -> {
-                //TODO Remover veículo
+                removerPorIndice();
+                IO.readln("Pressione Enter para Continuar");
+            }
+            case 4 -> {
+                buscar();
+                IO.readln("Pressione Enter para Continuar");
+            }
+            case 5 -> {
+                editar();
+                IO.readln("Pressione Enter para Continuar");
+            }
+            case 6 -> {
+                remocerPorNome();
                 IO.readln("Pressione Enter para Continuar");
             }
             case 0 -> {
@@ -172,5 +184,5 @@ void editar() {
 
     veiculos.set(indice, novoNome);
     IO.println("Veículo editado com sucesso!");
-    
+
 }
