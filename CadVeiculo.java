@@ -129,9 +129,9 @@ void removerPorIndice() {
         return;
     }
 
-    int indicce = Input.scanInt("Digite o índice do veículo a ser removido: ");
+    int indice = Input.scanInt("Digite o índice do veículo a ser removido: ");
     if(indice < 0 || indice >= veiculos.size()) {
-        IO.println("incice inválido!");
+        IO.println("índice inválido!");
         return;
     }
     veiculos.remove(indice);
