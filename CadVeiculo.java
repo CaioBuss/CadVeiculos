@@ -126,3 +126,51 @@ void removerPorIndice() {
     IO.println("Veículo removido com sucesso!");
 
 }
+
+void remocerPorNome() {
+    if (veiculos.size() == 0 ) {
+        IO.println("lista Vazia!");
+        return;
+    }
+    String nome = IO.readln("Digite o nome do veiculo a ser removido: ");
+    boolean removido = false;
+
+    for (int i = 0; i < veiculos.size(); i++) {
+        if (veiculos.get(i).equalsIgnoreCase(nome)) {
+            veiculos.remove(i);
+            IO.println("Veículo removido com sucesso!");
+            removido = true;
+            break;
+        }
+    }
+    if (!removido) {
+        IO.println("Veículo não encontrado!");
+    }
+}
+
+void editar() {
+    if (veiculos.size() == 0) {
+        IO.println("Lista Vazia!");
+        return;
+    }
+
+    int indice = Input.scanInt("Digite o índice do veículo a ser editado: ");
+    if (indice < 0 || indice >= veiculos.size()) {
+        IO.println("Indice invalido!");
+        return;
+    }
+
+    String novoNome = IO.readln("Digite o novo nome do veículo: ").trim();
+    if (novoNome.isEmpty()) {
+        IO.println("Nome do veículo inválido!");
+        return;
+    }
+    if (existeVeiculo(novoNome)) {
+        IO.println("Veículo já existe!");
+        return;
+    }
+
+    veiculos.set(indice, novoNome);
+    IO.println("Veículo editado com sucesso!");
+    
+}
