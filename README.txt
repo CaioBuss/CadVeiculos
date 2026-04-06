@@ -1,3 +1,3 @@
-Feito por Caio Buss e sua imensa INSANIDADE E MAESTRIA
+Feito por Caio Fernando de Andrade Buss e sua imensa INSANIDADE E MAESTRIA
 
 RA 1138241
